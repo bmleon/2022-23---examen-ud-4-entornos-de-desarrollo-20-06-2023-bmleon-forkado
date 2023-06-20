@@ -6,9 +6,37 @@ Extrae una superclase con los campos
 	nombre
 	apellidos
 	nif
+:author: Belen Maria Leon Fernandez
 """
 
-class Estudiante:
+
+class Persona:
+    @property
+    def apellidos(self):
+        return self.__apellidos
+
+    @apellidos.setter
+    def apellidos(self, value):
+        self.__apellidos = value
+
+    @property
+    def nif(self):
+        return self.__nif
+
+    @nif.setter
+    def nif(self, value):
+        self.__nif = value
+
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    @nombre.setter
+    def nombre(self, value: int):
+        self.__nombre = value
+
+
+class Estudiante(Persona):
     nif = "11111111Z";
     curso = "Primaria";
     nombre = "Nombre";
@@ -24,34 +52,10 @@ class Estudiante:
         self.apellidos = apellidos;
 
     @property
-    def nif(self):
-        return self.__nif
-
-    @nif.setter
-    def nif(self, value):
-        self.__nif = value
-
-    @property
     def curso(self):
         return self.__curso
 
     @curso.setter
     def curso(self, value):
         self.__curso = value
-
-    @property
-    def nombre(self):
-        return self.__nombre
-
-    @nombre.setter
-    def nombre(self, value: int):
-        self.__nombre = value
-
-    @property
-    def apellidos(self):
-        return self.__apellidos
-
-    @apellidos.setter
-    def apellidos(self, value):
-        self.__apellidos = value
 
