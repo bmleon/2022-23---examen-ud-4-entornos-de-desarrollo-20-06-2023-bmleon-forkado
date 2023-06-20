@@ -6,9 +6,19 @@ Clase Gato.
 class Gato:
 
     def maullar(self):
+        """
+        Metodo maullar
+        :author: Belen Leon
+        :return:
+        """
         print(self.maulla());
 
     def maulla(self):
+        """
+        Metodo maulla
+        :author: Belen Leon
+        :return:
+        """
         return 'Miau'
 
 
